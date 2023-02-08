@@ -1,0 +1,21 @@
+body{
+    background-color: red;
+}
+#board{
+   
+    background-color: black;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 140px 140px 140px;
+}
+.item{
+    margin: 10px;
+    background-color: white;
+}
+#text{
+    font-size: 100px;
+    color: black;
+    width: 100px;
+    margin: 0 auto;
+}
