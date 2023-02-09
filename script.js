@@ -92,18 +92,26 @@ const render = (()=>{
         return false}
     }
     const setplayertwo = ()=>{
+        const sheet = document.getElementById("sheet")
+        const grid = document.getElementById("board")
+        sheet.style.position = "fixed"
+        sheet.style.top = grid.getBoundingClientRect().top.toString()+"px"
+        sheet.style.left = grid.getBoundingClientRect().left.toString()+"px"
+        sheet.style.width = grid.getBoundingClientRect().width.toString()+"px"
+        sheet.style.height = grid.getBoundingClientRect().height.toString()+"px"
         const ele = document.querySelectorAll("input[type='radio']")
         return new Promise((resolve, reject) => {
             ele.forEach(element => {
                 element.addEventListener("click",()=>{
                    
                         if(element.value == "human"){
+                            
                             resolve(true)
                         }
                         else{
                             resolve(false)
                         }
-                    
+                        document.body.removeChild(sheet)
                 })            
             });
         })
