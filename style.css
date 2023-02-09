@@ -2,20 +2,41 @@ body{
     background-color: red;
 }
 #board{
-   
+    
     background-color: black;
-    position: fixed;
+    width: fit-content;
     display: grid;
     grid-template-columns: 140px 140px 140px;
     grid-template-rows: 140px 140px 140px;
 }
 .item{
+    color: black;
     margin: 10px;
     background-color: white;
 }
 #text{
     font-size: 100px;
     color: black;
-    width: 100px;
-    margin: 0 auto;
+    margin-top: 20px;
+}
+.wrapper{
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper>div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-top: 50px;
+}
+.wrapper>div:nth-child(2){
+    font-size: 30px;
+}
+.wrapper>div:nth-child(3){
+    margin-top: 20px;
+    display: flex;
+    width: 200px;
+    flex-direction: row;
+    justify-content: space-around;
 }
